@@ -35,7 +35,7 @@ int main(){
     getline(cin, oper);
     if(oper == "!"){
         facto = stoi(first);
-        for(int i = stoi(first)-1; i > 1; i--){
+        for(int i = facto-1; i > 1; i--){
             facto *= i;
         }
         cout << facto << endl;
