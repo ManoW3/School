@@ -81,8 +81,8 @@ int main(){
         cout << "Second: " << newSecond << endl;
     }
     else if(oper == "--"){
-        newFirst++;
-        newSecond++;
+        newFirst--;
+        newSecond--;
         cout << "First: " <<  newFirst-- << endl;
         cout << "Second: " <<  newSecond-- << endl;
     }
