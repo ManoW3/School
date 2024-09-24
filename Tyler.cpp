@@ -1,3 +1,7 @@
+// Mano Wertman
+// 9/24/24
+// Classmate Program
+
 #include <iostream>
 using namespace std;
 
