@@ -9,7 +9,7 @@ int main()
     scanf("%[^\n]%*c", name);
 
     int age;
-    printf("age: ");
+    printf("Age: ");
     scanf("%d", &age);
 
     char initial;
@@ -23,5 +23,5 @@ int main()
 
     printf("\nI will now make some predictions about you... \n\n");
 
-    printf("Your name is %s \nYou are 15 years old%d \nYour first initial is %c \nYour grade average is %.2f", name, age, initial, grade);
+    printf("Your name is %s \nYou are %d years old \nYour first initial is %c \nYour grade average is %.2f", name, age, initial, grade);
 }
