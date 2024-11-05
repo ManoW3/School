@@ -21,6 +21,7 @@ int main(){
 
 
     // While Loops
+    // Introduction
     cout << "---------------------------------" << endl;
     cout << "Welcome to the Zombie Game!!!" << endl;
     cout << "Try not to: \nRun out of energy\nRun out of supplies\nStay in your shelter for over 30 days" << endl;
@@ -29,6 +30,7 @@ int main(){
     int energy = 5;
     int supplies = 1;
     int day = 1;
+    // Game loop that displays stats and asks for input
     while(energy > 0 && supplies < 10 && day < 30 && supplies >= 0){
         cout << "---------------------------------" << endl;
         cout << "Day " << day << " Stats:" << endl;
@@ -56,6 +58,7 @@ int main(){
         
         day += 1;
     }
+    // How the program ends
     if(supplies == 10){
         cout << "Woohoo! You survived after " << day << " days!" << endl;
     }
@@ -72,18 +75,21 @@ int main(){
     char tryAgain;
     do
     {
+        // Asks for guess and if they want to play again
         cout << "What is your guess? ";
         cin >> guess;
         if(password!=guess){
             cout << "Wrong, woud you like to play again? (Y/N): ";
             cin >> tryAgain;
             if(tryAgain == 'N' or tryAgain == 'n'){
+                // Breaks if they choose no
                 cout << "Adois, you couldn't guess it" << endl;
                 break;
             }
         }
+    // Breaks if guess is correct
     }while(password!=guess);
-
+    // COngratulates if guess is correct
     if(password == guess){
         cout << "Yay!!! You unlocked the box";
     }
