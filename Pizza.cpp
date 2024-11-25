@@ -6,24 +6,25 @@
 #include <iomanip>
 
 using namespace std;
-
+// Gloabl variables
 double pricePerInch = .362196;
 double pricePerTopping = 1.39;
-
+// Functions
 double pizzaPrice(int pizzaQ, int area, int toppingsQ);
 double calcArea(double inches);
 void bill(double cost, int size, int pizzaQ, int toppingsQ);
 int main()
 {
+    // Greeting
     cout << "--------------------------------------" << endl;
     cout << "  Welcome to the Skibidi Ohio Pizza" << endl;
     cout << "--------------------------------------" << endl;
-
+    // Local functions
     double size;
     int toppingsQ;
     int pizzaQ;
     int toppingsEach;
-
+    // Gets size and amounts
     cout << "How many Inches would you like (Diameter) ? " << endl;
     cin >> size;
     cout << "How many Pizzas would you like to order? " << endl;
@@ -33,7 +34,7 @@ int main()
     cin >> toppingsEach;
 
     toppingsQ = toppingsEach*pizzaQ;
-
+    // Calss fuctions
     double area = calcArea(size);
     double subTotal = pizzaPrice(pizzaQ, area, toppingsQ);
     bill(subTotal, size, pizzaQ, toppingsQ);
