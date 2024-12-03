@@ -25,7 +25,6 @@ int main()
     // John is walking ALONG a unit circle, he walks 30º (Up from 1, 0), what is his current x position?
 
     double rads = 30*(3.1415926535/180);            // Converts to Radians
-    cout << rads << endl;
     cout << "His y position will be " << cos(rads) << " Units" << endl;
 
     // A crypto is rising at 6% per day, if the coin starts at $0.01, how long will it take until it overtakes Dow Jones ($44,782.00 as of writing this problem)
