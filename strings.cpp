@@ -9,7 +9,7 @@ int main() {
     string converted;
 
     for (char c : name) {
-        if(isalnum(c)){
+        if(isalpha(c)){
             char upperC = toupper(c);
             converted += upperC;
         }
