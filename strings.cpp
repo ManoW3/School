@@ -1,3 +1,6 @@
+// Mano Wertman
+// Name thing
+// 12/6/24
 #include <iostream>
 #include <string>
 using namespace std;
@@ -9,15 +12,15 @@ int main() {
     string converted;
 
     for (char c : name) {
-        if(isalpha(c)){
-            char upperC = toupper(c);
-            converted += upperC;
+        if(isalpha(c)||isspace(c)){         // Checks if it is alpha or a space
+            char upperC = toupper(c);       
+            converted += upperC;            // addes the converted char to the string
         }
         else{
             return 0;
         }
     }
 
-    cout << "Your uppercase name is: " << converted << "!" << endl;
+    cout << "Your uppercase name is: " << converted << "!" << endl;     // prints out the string
 
 }
