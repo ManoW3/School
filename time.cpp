@@ -3,6 +3,8 @@
 // 12/12/24
 #include <iostream>
 #include <ctime>
+#include <cstdlib> // Needed for rand() and srand()
+
 using namespace std;
 int main() {
     // 1. It is 7 PM in Tokyo, the UTC offset it +9 hours
@@ -26,13 +28,26 @@ int main() {
 
 
     // Program 3
+    srand(time(0));
     time_t startTime = time(nullptr);
-
     int guess;
-    cout << "What is 8 + 9? ";
-    cin >> guess;
+    int score;
+    for (int i = 1; i <= 10; i++) {
+        int firstRand = rand() % 20;
+        int secondRand = rand() % 20;
+        printf("%d. What is %d + %d?\n",i ,firstRand, secondRand);
+        cin >> guess;
+        if(guess == firstRand + secondRand)
+            score++;
 
-    time_t entTime = time(nullptr);
-
+    }
     
+    time_t endTime = time(nullptr);
+    double totalTime = difftime(endTime, startTime);
+    double timePerQuestion = totalTime/10;
+
+    if (score > 5)
+        printf("It took you %d seconds to answer those 10 questions, That is an average of %.1f per question\n", int(totalTime), timePerQuestion);
+    else
+        printf("You got under 50%%!\n");
 }
