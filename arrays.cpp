@@ -1,3 +1,7 @@
+// Emanuel Wertman
+// January 26, 2025
+// Arrays Lab
+// Extra: Added an odd number counter
 #include <iostream>
 #include <cmath>
 
@@ -36,6 +40,14 @@ int main() {
         }
     }
     cout << "Total even numbers: " << evenCount << endl;
+
+    int oddCount = 0;
+    for (int i = 0; i < 10; i++) {
+        if (randomNumbers[i] % 2 == 1) {
+            oddCount++;
+        }
+    }
+    cout << "Total odd numbers: " << oddCount << endl;
 
     // Sales for ice cream store
     int sales[5];
