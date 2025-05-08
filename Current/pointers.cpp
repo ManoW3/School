@@ -38,7 +38,7 @@ int main() {
     cout << "Memory Adress : " << &charPtr << endl;
     *charPtr = 'l';
     cout << "Letter: " << c << endl;
-    cout << "Memory Adress : " << &charPtr << endl;
+    cout << "Memory Adress : " << (void*)y << endl;
 
     return 0;
 }
