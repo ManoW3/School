@@ -8,7 +8,7 @@
 using namespace std;
 
 void q1 (string &word) {
-
+    // Iterates through the string and changes each letter to lowercase
     for (int i = 0; i < word.length(); i++) {
         word[i] = tolower(word[i]);
     }
@@ -21,7 +21,7 @@ void q2 (int &num) {
 
 int q3 (int num2) { 
     int randomNum = rand() % 11;
-
+    // Returns result
     return num2 + randomNum;
 
 }
@@ -65,6 +65,7 @@ int main() {
     // -------------------------------
     vector<int> nums = {10, 20, 30};
     cout << "Vector Before: " << endl;
+    // Prints by iterating using a for each
     for (int i : nums) {
         cout << i << endl;
     }
